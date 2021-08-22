@@ -27,20 +27,6 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
         binding.settingsList.setOnViewReadyListener {
             binding.settingsList.scrollToPosition(0)
         }
-
-        val resource = requireContext().resources
-        val l_50 = resource.getDimensionPixelSize(R.dimen.l_50)
-        val l1 = resource.getDimensionPixelSize(R.dimen.l1)
-        binding.settingsList.addVerticalPadding(
-            0,
-            l1
-        )
-        binding.settingsList.addSimpleItemDecoration(
-            left = l1,
-            top = l_50,
-            right = l1,
-            bottom = l_50,
-        )
         binding.settingsList.fixEdgeEffect()
     }
 
