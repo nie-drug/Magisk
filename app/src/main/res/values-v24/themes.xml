@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Base.Theme.GoogleMaterial.Dark" parent="@style/Base.V24.Theme.GoogleMaterial.Dark" />
+	<style name="Base.Theme.GoogleMaterial.Dark.Dialog" parent="@style/Base.V24.Theme.GoogleMaterial.Dark.Dialog" />
+	<style name="Base.Theme.GoogleMaterial.Light" parent="@style/Base.V24.Theme.GoogleMaterial.Light" />
+	<style name="Base.Theme.GoogleMaterial.Light.Dialog" parent="@style/Base.V24.Theme.GoogleMaterial.Light.Dialog" />
+	<style name="Base.Theme.GoogleMaterial3.Dark" parent="@style/Base.V24.Theme.GoogleMaterial3.Dark" />
+	<style name="Base.Theme.GoogleMaterial3.Dark.Dialog" parent="@style/Base.V24.Theme.GoogleMaterial3.Dark.Dialog" />
+	<style name="Base.Theme.GoogleMaterial3.Light" parent="@style/Base.V24.Theme.GoogleMaterial3.Light" />
+	<style name="Base.Theme.GoogleMaterial3.Light.Dialog" parent="@style/Base.V24.Theme.GoogleMaterial3.Light.Dialog" />
+	<style name="Base.V24.Theme.GoogleMaterial.Dark" parent="@style/Base.V21.Theme.GoogleMaterial.Dark">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial.Dark.Dialog" parent="@style/Base.V21.Theme.GoogleMaterial.Dark.Dialog">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial.Light" parent="@style/Base.V23.Theme.GoogleMaterial.Light">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial.Light.Dialog" parent="@style/Base.V21.Theme.GoogleMaterial.Light.Dialog">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial3.Dark" parent="@style/Base.V14.Theme.GoogleMaterial3.Dark">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial3.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial3.Dark.Dialog" parent="@style/Base.V14.Theme.GoogleMaterial3.Dark.Dialog">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial3.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial3.Light" parent="@style/Base.V14.Theme.GoogleMaterial3.Light">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial3.PopupMenu.ContextMenu</item>
+	</style>
+	<style name="Base.V24.Theme.GoogleMaterial3.Light.Dialog" parent="@style/Base.V14.Theme.GoogleMaterial3.Light.Dialog">
+		<item name="android:contextPopupMenuStyle">@style/Widget.GoogleMaterial3.PopupMenu.ContextMenu</item>
+	</style>
+</resources>
