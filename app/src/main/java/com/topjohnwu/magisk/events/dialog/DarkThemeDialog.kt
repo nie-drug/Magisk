@@ -16,17 +16,14 @@ class DarkThemeDialog : DialogEvent() {
             .applyMessage(R.string.settings_dark_mode_message)
             .applyButton(MagiskDialog.ButtonType.POSITIVE) {
                 titleRes = R.string.settings_dark_mode_light
-                icon = R.drawable.ic_day
                 onClick { selectTheme(AppCompatDelegate.MODE_NIGHT_NO, activity) }
             }
             .applyButton(MagiskDialog.ButtonType.NEUTRAL) {
                 titleRes = R.string.settings_dark_mode_system
-                icon = R.drawable.ic_day_night
                 onClick { selectTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, activity) }
             }
             .applyButton(MagiskDialog.ButtonType.NEGATIVE) {
                 titleRes = R.string.settings_dark_mode_dark
-                icon = R.drawable.ic_night
                 onClick { selectTheme(AppCompatDelegate.MODE_NIGHT_YES, activity) }
             }
     }
