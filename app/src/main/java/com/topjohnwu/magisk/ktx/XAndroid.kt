@@ -289,7 +289,7 @@ fun ViewGroup.startAnimations() {
     val transition = AutoTransition()
         .setInterpolator(FastOutSlowInInterpolator())
         .setDuration(400)
-        .excludeTarget(R.id.main_toolbar, true)
+        .excludeTarget(R.id.toolbar, true)
     TransitionManager.beginDelayedTransition(
         this,
         transition
