@@ -65,20 +65,20 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
             setDisplayHomeAsUpEnabled(!isRootFragment)
             requestNavigationHidden(!isRootFragment)
 
-            binding.mainNavigation.menu.forEach {
+            binding.bottomNavigation.menu.forEach {
                 if (it.itemId == destination.id) {
                     it.isChecked = true
                 }
             }
         }
 
-        setSupportActionBar(binding.mainToolbar)
+        setSupportActionBar(binding.toolbar)
 
-        binding.mainNavigation.setOnNavigationItemSelectedListener {
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
             getScreen(it.itemId)?.navigate()
             true
         }
-        binding.mainNavigation.setOnNavigationItemReselectedListener {
+        binding.bottomNavigation.setOnNavigationItemReselectedListener {
             (currentFragment as? ReselectionTarget)?.onReselected()
         }
 
@@ -95,7 +95,7 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
 
     override fun onResume() {
         super.onResume()
-        binding.mainNavigation.menu.apply {
+        binding.bottomNavigation.menu.apply {
             findItem(R.id.superuserFragment)?.isEnabled = Utils.showSuperUser()
             findItem(R.id.logFragment)?.isEnabled = Info.env.isActive
         }
@@ -110,29 +110,28 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
     }
 
     fun setDisplayHomeAsUpEnabled(isEnabled: Boolean) {
-        binding.mainToolbar.startAnimations()
+        binding.toolbar.startAnimations()
         when {
-            isEnabled -> binding.mainToolbar.setNavigationIcon(R.drawable.ic_back_md2)
-            else -> binding.mainToolbar.navigationIcon = null
+            isEnabled -> binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
+            else -> binding.toolbar.navigationIcon = null
         }
     }
 
     @Suppress("UNCHECKED_CAST")
     internal fun requestNavigationHidden(hide: Boolean = true) {
-        val topView = binding.mainToolbarWrapper
-        val bottomView = binding.mainBottomBar
+        val bottomView = binding.bottomNavigation
 
-        if (!binding.mainBottomBar.isAttachedToWindow) {
-            binding.mainBottomBar.viewTreeObserver.addOnWindowAttachListener(object :
+        if (!binding.bottomNavigation.isAttachedToWindow) {
+            binding.bottomNavigation.viewTreeObserver.addOnWindowAttachListener(object :
                 ViewTreeObserver.OnWindowAttachListener {
 
                 init {
                     val listener =
-                        binding.mainBottomBar.tag as? ViewTreeObserver.OnWindowAttachListener
+                        binding.bottomNavigation.tag as? ViewTreeObserver.OnWindowAttachListener
                     if (listener != null) {
-                        binding.mainBottomBar.viewTreeObserver.removeOnWindowAttachListener(listener)
+                        binding.bottomNavigation.viewTreeObserver.removeOnWindowAttachListener(listener)
                     }
-                    binding.mainBottomBar.tag = this
+                    binding.bottomNavigation.tag = this
                 }
 
                 override fun onWindowAttached() {
@@ -145,19 +144,14 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
             return
         }
 
-        val topParams = topView.layoutParams as? CoordinatorLayout.LayoutParams
         val bottomParams = bottomView.layoutParams as? CoordinatorLayout.LayoutParams
-
-        val topBehavior = topParams?.behavior as? HideableBehavior<View>
         val bottomBehavior = bottomParams?.behavior as? HideableBehavior<View>
-
-        topBehavior?.setHidden(topView, hide = false, lockState = false)
         bottomBehavior?.setHidden(bottomView, hide, hide)
     }
 
     fun invalidateToolbar() {
-        //binding.mainToolbar.startAnimations()
-        binding.mainToolbar.invalidate()
+        //binding.toolbar.startAnimations()
+        binding.toolbar.invalidate()
     }
 
     private fun getScreen(name: String?): NavDirections? {
