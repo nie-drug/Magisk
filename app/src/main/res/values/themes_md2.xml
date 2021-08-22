@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeFoundationMD2" parent="Theme.GoogleMaterial.Light.NoActionBar">
+        <item name="colorSurfaceVariant">#E8E8E8</item>
+        <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
+        <item name="colorOnPrimaryVariant">#D9E6E6E6</item>
+        <item name="colorDisabled">#808080</item>
+        <item name="colorDisabledVariant">#66808080</item>
+    </style>
+    <style name="ThemeFoundationMD2.Piplup" parent="ThemeFoundationMD2">
+        <item name="colorOnSecondary">@color/google_blue700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_blue900</item>
+        <item name="colorPrimaryGoogle">@color/google_blue600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_blue900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_blue500</item>
+        <item name="colorSecondary">@color/google_blue50</item>
+        <item name="colorSecondaryVariant">@color/google_blue100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Amoled" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_purple700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_purple900</item>
+        <item name="colorPrimaryGoogle">@color/google_purple600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_purple900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_purple500</item>
+        <item name="colorSecondary">@color/google_purple50</item>
+        <item name="colorSecondaryVariant">@color/google_purple100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Charmeleon" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_red700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_red900</item>
+        <item name="colorPrimaryGoogle">@color/google_red600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_red900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_red500</item>
+        <item name="colorSecondary">@color/google_red50</item>
+        <item name="colorSecondaryVariant">@color/google_red100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Mew" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_pink700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_pink900</item>
+        <item name="colorPrimaryGoogle">@color/google_pink600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_pink900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_pink500</item>
+        <item name="colorSecondary">@color/google_pink50</item>
+        <item name="colorSecondaryVariant">@color/google_pink100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Salamence" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_cyan700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_cyan900</item>
+        <item name="colorPrimaryGoogle">@color/google_cyan600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_cyan900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_cyan500</item>
+        <item name="colorSecondary">@color/google_cyan50</item>
+        <item name="colorSecondaryVariant">@color/google_cyan100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Rayquaza" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_green700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_green900</item>
+        <item name="colorPrimaryGoogle">@color/google_green600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_green900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_green500</item>
+        <item name="colorSecondary">@color/google_green50</item>
+        <item name="colorSecondaryVariant">@color/google_green100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Zapdos" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_yellow700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_yellow900</item>
+        <item name="colorPrimaryGoogle">@color/google_yellow600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_yellow900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_yellow500</item>
+        <item name="colorSecondary">@color/google_yellow50</item>
+        <item name="colorSecondaryVariant">@color/google_yellow100</item>
+    </style>
+    <style name="ThemeFoundationMD2.Fraxure" parent="ThemeFoundationMD2.Piplup">
+        <item name="colorOnSecondary">@color/google_orange700</item>
+        <item name="colorOnSecondaryStateContent">@color/google_orange900</item>
+        <item name="colorPrimaryGoogle">@color/google_orange600</item>
+        <item name="colorPrimaryStateContentGoogle">@color/google_orange900</item>
+        <item name="colorPrimaryVariantGoogle">@color/google_orange500</item>
+        <item name="colorSecondary">@color/google_orange50</item>
+        <item name="colorSecondaryVariant">@color/google_orange100</item>
+    </style>
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+    <style name="ThemeFoundationMD2.Fraxure" parent="ThemeFoundationMD2.Amoled">
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryVariant">#8000796B</item>
+        <item name="colorSecondary">?colorError</item>
+        <item name="colorSecondaryVariant">#806D1111</item>
+    </style>
+</resources>

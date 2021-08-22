@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.V21.Theme.Foundation.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">?colorSurface</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="dialogTheme">@style/ThemeOverlay.Foundation.Dialog</item>
+        <item name="android:statusBarColor">#38000000</item>
+        <item name="android:navigationBarColor">#38000000</item>
+    </style>
+    <style name="Base.V21.Theme.Foundation" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">?colorSurface</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="dialogTheme">@style/ThemeOverlay.Foundation.Dialog</item>
+        <item name="android:statusBarColor">#60000000</item>
+        <item name="android:navigationBarColor">#60000000</item>
+    </style>
+    <style name="Theme.Foundation.Light" parent="Base.V21.Theme.Foundation.Light" />
+    <style name="Theme.Foundation" parent="Base.V21.Theme.Foundation" />
+    <style name="Base.V21.Theme.Splash.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_splash_activity</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+    <style name="Base.V21.Theme.Splash" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_splash_activity</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+    <style name="Theme.Splash.Light" parent="Base.V21.Theme.Splash.Light" />
+    <style name="Theme.Splash" parent="Base.V21.Theme.Splash" />
+    <style name="Base.V21.ThemeOverlay.Foundation.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="ThemeOverlay.Foundation.Dialog" parent="Base.V21.ThemeOverlay.Foundation.Dialog" />
+    <style name="W" parent="android:Widget" />
+    <!--region Home-->
+    <style name="W.Home" />
+    <style name="W.Home.Card" parent="WidgetFoundation.Card">
+        <item name="android:layout_marginStart">@dimen/l1</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="W.Home.Card.First">
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+    <style name="W.Home.Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/l1</item>
+        <item name="android:paddingEnd">@dimen/l1</item>
+        <item name="android:textAppearance">@style/AppearanceFoundation.Body</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">@dimen/l_50</item>
+        <item name="android:paddingBottom">@dimen/l_50</item>
+    </style>
+    <style name="W.Home.Section">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">?colorSurface</item>
+        <item name="android:alpha">.5</item>
+    </style>
+    <style name="W.Home.Item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/l1</item>
+        <item name="android:paddingEnd">@dimen/l1</item>
+    </style>
+    <style name="W.Home.Item.Top">
+        <item name="android:paddingTop">@dimen/l_75</item>
+    </style>
+    <style name="W.Home.Item.Bottom">
+        <item name="android:paddingBottom">@dimen/l_75</item>
+    </style>
+    <style name="W.Home.ItemContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/AppearanceFoundation.Caption.Variant</item>
+    </style>
+
+    <style name="W.Home.ItemContent.Right">
+        <item name="android:layout_marginStart">@dimen/l_50</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/AppearanceFoundation.Caption</item>
+    </style>
+    <!--endregion-->
+    <!--region Themes-->
+    <style name="W.Theme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/l1</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="W.Theme.Left">
+        <item name="android:layout_marginEnd">@dimen/l1</item>
+    </style>
+    <style name="W.Theme.Right" />
+    <style name="W.Theme.Container" parent="Empty">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned">false</item>
+    </style>
+    <!--endregion-->
+    <style name="WidgetFoundation.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:focusable">auto</item>
+        <item name="cardBackgroundColor">?colorSurfaceVariant</item>
+        <item name="cardCornerRadius">@dimen/l_50</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardPreventCornerOverlap">false</item>
+    </style>
+    <style name="WidgetFoundation.Card.Primary">
+        <item name="cardBackgroundColor">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Card.Secondary">
+        <item name="cardBackgroundColor">?colorSecondary</item>
+    </style>
+    <style name="WidgetFoundation.Card.Elevated">
+        <item name="cardBackgroundColor">?colorSurfaceSurfaceVariant</item>
+        <item name="cardCornerRadius">@dimen/l_50</item>
+        <item name="cardElevation">@dimen/l_125</item>
+    </style>
+    <style name="WidgetFoundation.Card.OnPrimary">
+        <item name="cardCornerRadius">@dimen/l_50</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">?colorOnPrimaryVariant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/l_50</item>
+    </style>
+    <style name="WidgetFoundation.Button.OnPrimary">
+        <item name="backgroundTint">?colorOnPrimary</item>
+        <item name="rippleColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/l_50</item>
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Outlined.OnPrimary">
+        <item name="strokeColor">?colorOnPrimary</item>
+        <item name="rippleColor">?colorOnPrimary</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="iconTint">?colorOnPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Outlined.Error">
+        <item name="strokeColor">@color/color_error_transient</item>
+        <item name="rippleColor">@color/color_error_transient</item>
+        <item name="android:textColor">@color/color_error_transient</item>
+        <item name="iconTint">@color/color_error_transient</item>
+    </style>
+    <style name="WidgetFoundation.Button.Flat" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/l_50</item>
+    </style>
+    <style name="WidgetFoundation.Button.Flat.OnPrimary">
+        <item name="backgroundTint">?colorOnPrimary</item>
+        <item name="rippleColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textStyle">bold</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/l_50</item>
+    </style>
+    <style name="WidgetFoundation.Button.Text.Secondary">
+        <item name="android:textColor">?colorSecondary</item>
+        <item name="iconTint">?colorSecondary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Text.OnPrimary">
+        <item name="rippleColor">?colorOnPrimary</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="iconTint">?colorOnPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Button.Error" parent="WidgetFoundation.Button.Text">
+        <item name="rippleColor">?colorError</item>
+        <item name="android:textColor">?colorError</item>
+        <item name="iconTint">?colorError</item>
+    </style>
+    <style name="WidgetFoundation.Image">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+    <style name="WidgetFoundation.Image.Big">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+    <style name="WidgetFoundation.Image.Small">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+    <style name="WidgetFoundation.Icon" parent="WidgetFoundation.Image.Big">
+        <item name="android:padding">@dimen/l_75</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="tint">@color/color_text_transient</item>
+    </style>
+    <style name="WidgetFoundation.Icon.Primary">
+        <item name="tint">@color/color_primary_transient</item>
+    </style>
+    <style name="WidgetFoundation.Icon.Secondary">
+        <item name="tint">@color/color_secondary_transient</item>
+    </style>
+    <style name="WidgetFoundation.Icon.OnPrimary">
+        <item name="tint">@color/color_on_primary_transient</item>
+    </style>
+    <style name="WidgetFoundation.Icon.Error">
+        <item name="tint">@color/color_error_transient</item>
+    </style>
+    <style name="WidgetFoundation.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:paddingStart">@dimen/l1</item>
+        <item name="android:paddingEnd">@dimen/l1</item>
+    </style>
+    <style name="WidgetFoundation.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:paddingStart">@dimen/l1</item>
+        <item name="android:paddingEnd">@dimen/l1</item>
+    </style>
+    <style name="WidgetFoundation.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminate">false</item>
+        <item name="android:layout_height">4dp</item>
+    </style>
+    <style name="WidgetFoundation.ProgressBar.Indeterminate" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminate">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:indeterminateTint">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.ProgressBar.Indeterminate.Circular" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:indeterminateTint">?colorPrimary</item>
+    </style>
+    <style name="WidgetFoundation.Switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_checkbox</item>
+        <item name="srcCompat">@drawable/ic_checkbox</item>
+    </style>
+    <!--region Display-->
+    <style name="AppearanceFoundation.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="AppearanceFoundation.Large.Secondary">
+        <item name="android:textColor">?colorSecondary</item>
+    </style>
+    <style name="AppearanceFoundation.Large.Variant">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="AppearanceFoundation.Display.OnPrimary" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Display.OnPrimary.Variant">
+        <item name="android:textColor">?attr/colorOnPrimaryVariant</item>
+    </style>
+    <!--endregion-->
+    <!--region Title-->
+    <style name="AppearanceFoundation.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppearanceFoundation.Title.Variant">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="AppearanceFoundation.Title.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Title.OnPrimary.Variant">
+        <item name="android:textColor">?attr/colorOnPrimaryVariant</item>
+    </style>
+    <!--endregion-->
+    <!--region Body-->
+    <style name="AppearanceFoundation.Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="AppearanceFoundation.Body.Variant">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="AppearanceFoundation.Body.Primary">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Body.Secondary">
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+    <style name="AppearanceFoundation.Body.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Body.OnPrimary.Variant">
+        <item name="android:textColor">?attr/colorOnPrimaryVariant</item>
+    </style>
+    <!--endregion-->
+    <!--region Caption-->
+    <style name="AppearanceFoundation.Caption" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+    <style name="AppearanceFoundation.Caption.Variant">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="AppearanceFoundation.Caption.Primary">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Caption.Secondary">
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+    <style name="AppearanceFoundation.Caption.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Caption.OnPrimary.Variant">
+        <item name="android:textColor">?attr/colorOnPrimaryVariant</item>
+    </style>
+    <!--endregion-->
+    <!--region Tiny-->
+    <style name="AppearanceFoundation.Tiny" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="AppearanceFoundation.Tiny.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppearanceFoundation.Tiny.Variant">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="AppearanceFoundation.Tiny.OnPrimary">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="AppearanceFoundation.Tiny.OnPrimary.Variant">
+        <item name="android:textColor">?attr/colorOnPrimaryVariant</item>
+    </style>
+    <!--endregion-->
+    <style name="SplashTheme" parent="Theme.Splash.Light" />
+    <style name="Foundation" parent="Theme.Foundation.Light" />
+    <!--region Do not remove-->
+    <style name="Empty" />
+    <style name="WidgetFoundation" parent="android:Widget" />
+    <!--endregion-->
+    <style name="Foundation.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+        <item name="android:itemTextAppearance">@style/AppearanceFoundation.Caption</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Foundation.Default">
+        <item name="android:includeFontPadding">false</item>
+        <item name="actionBarSize">@dimen/internal_action_bar_size</item>
+        <item name="popupMenuStyle">@style/Foundation.PopupMenu</item>
+    </style>
+    <style name="Foundation.Floating" parent="Empty">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
