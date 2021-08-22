@@ -32,13 +32,11 @@
 
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/theme_appbar"
-                style="@style/WidgetFoundation.Appbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.appbar.MaterialToolbar
-                    style="@style/WidgetFoundation.Toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
