@@ -24,14 +24,12 @@ class ModuleInstallDialog(private val item: OnlineModule) : DialogEvent() {
                 .cancellable(true)
                 .applyButton(MagiskDialog.ButtonType.NEGATIVE) {
                     titleRes = R.string.download
-                    icon = R.drawable.ic_download_md2
                     onClick { download(false) }
                 }
 
             if (Info.env.isActive) {
                 applyButton(MagiskDialog.ButtonType.POSITIVE) {
                     titleRes = R.string.install
-                    icon = R.drawable.ic_install
                     onClick { download(true) }
                 }
             }
