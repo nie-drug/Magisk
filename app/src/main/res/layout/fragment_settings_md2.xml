@@ -2,17 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
-
         <import type="com.topjohnwu.magisk.core.Config" />
-
         <variable
             name="viewModel"
             type="com.topjohnwu.magisk.ui.settings.SettingsViewModel" />
-
     </data>
-
     <androidx.recyclerview.widget.RecyclerView
         adapter="@{viewModel.adapter}"
         itemBinding="@{viewModel.itemBinding}"
@@ -23,11 +18,8 @@
         android:focusableInTouchMode="false"
         android:clipToPadding="false"
         android:orientation="vertical"
-        android:paddingTop="@dimen/internal_action_bar_size"
-        app:fitsSystemWindowsInsets="top|bottom"
+        android:scrollIndicators="top"
+        app:fitsSystemWindowsInsets="bottom"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:layout_marginTop="24dp"
-        tools:listitem="@layout/item_settings"
-        tools:paddingTop="@dimen/l1" />
-
+        tools:listitem="@layout/item_settings"/>
 </layout>

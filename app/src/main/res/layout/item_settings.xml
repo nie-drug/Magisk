@@ -2,89 +2,97 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
-
         <variable
             name="item"
             type="com.topjohnwu.magisk.ui.settings.BaseSettingsItem" />
-
         <variable
             name="callback"
             type="com.topjohnwu.magisk.ui.settings.BaseSettingsItem.Callback" />
-
     </data>
-
-    <com.google.android.material.card.MaterialCardView
-        style="@style/WidgetFoundation.Card"
-        isEnabled="@{item.enabled}"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:paddingStart="24dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clipToPadding="false"
+        android:baselineAligned="false"
         android:alpha="@{item.enabled ? 1f : .5f}"
         android:clickable="@{item.enabled}"
         android:focusable="@{item.enabled}"
         android:onClick="@{(view) -> item.onPressed(view, callback)}"
-        tools:layout_gravity="center">
-
+        isEnabled="@{item.enabled}">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/icon_frame"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
+            android:minWidth="48dp"
+            android:gravity="start|center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="@{item.icon == 0 ? @dimen/l1 : 0}"
-            android:paddingEnd="@dimen/l1">
-
-            <ImageView
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+            <androidx.preference.internal.PreferenceImageView
                 android:id="@+id/icon"
-                style="@style/WidgetFoundation.Icon"
-                gone="@{item.icon == 0}"
-                android:background="@null"
-                app:srcCompat="@{item.icon}"
-                tools:srcCompat="@drawable/ic_fingerprint" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingTop="@dimen/l1"
-                android:paddingBottom="@dimen/l1">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="start"
-                    android:text="@{item.title}"
-                    android:textAppearance="@style/AppearanceFoundation.Body"
-                    android:textStyle="bold"
-                    tools:lines="1"
-                    tools:text="@tools:sample/lorem/random" />
-
-                <TextView
-                    gone="@{item.description.empty}"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{item.description}"
-                    android:textAppearance="@style/AppearanceFoundation.Tiny.Variant"
-                    tools:lines="2"
-                    tools:text="@tools:sample/lorem/random" />
-
-            </LinearLayout>
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/selector_indicator"
-                goneUnless="@{item.showSwitch}"
-                isEnabled="@{item.enabled}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{item.checked}"
-                android:focusable="@{item.enabled}"
-                android:onCheckedChanged="@{(v, c) -> item.onToggle(v, callback, c)}" />
-
+                android:tint="?android:attr/textColorSecondary"
+                app:srcCompat="@{item.icon}"
+                gone="@{item.icon == 0}"
+                app:maxWidth="48dp"
+                app:maxHeight="48dp" />
         </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingEnd="14dp">
+            <TextView
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:ellipsize="marquee"
+                android:text="@{item.title}"/>
+            <TextView
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:layout_alignStart="@android:id/title"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:textColor="?android:attr/textColorSecondary"
+                android:maxLines="10"
+                style="@style/PreferenceSummaryTextStyle"
+                android:text="@{item.description}"
+                gone="@{item.description.empty}"/>
+        </RelativeLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/selector_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end|center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingRight="8dp"
+            android:paddingEnd="8dp"
+            android:checked="@{item.checked}"
+            android:focusable="@{item.enabled}"
+            android:onCheckedChanged="@{(v, c) -> item.onToggle(v, callback, c)}"
+            goneUnless="@{item.showSwitch}"
+            isEnabled="@{item.enabled}" />
+    </LinearLayout>
 </layout>
