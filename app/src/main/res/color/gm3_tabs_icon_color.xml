@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:state_enabled="false"
+		android:color="?attr/colorOnSurface"
+		android:alpha="@dimen/material_emphasis_disabled" />
+	<item
+		android:state_selected="true"
+		android:state_pressed="true"
+		android:color="?attr/colorPrimaryStateContent" />
+	<item
+		android:state_focused="true"
+		android:state_selected="true"
+		android:color="?attr/colorPrimaryStateContent" />
+	<item
+		android:state_selected="true"
+		android:color="?attr/colorPrimaryStateContent"
+		android:state_hovered="true" />
+	<item
+		android:state_selected="true"
+		android:color="?attr/colorPrimary" />
+	<item
+		android:state_pressed="true"
+		android:color="?attr/colorOnSurfaceVariantStateContent" />
+	<item
+		android:state_focused="true"
+		android:color="?attr/colorOnSurfaceVariantStateContent" />
+	<item
+		android:color="?attr/colorOnSurfaceVariantStateContent"
+		android:state_hovered="true" />
+	<item
+		android:color="?attr/colorOnSurfaceVariant" />
+</selector>
