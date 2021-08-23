@@ -28,9 +28,7 @@ class LogFragment : BaseUIFragment<LogViewModel, FragmentLogMd2Binding>() {
             MotionRevealHelper.withViews(binding.logFilter, binding.logFilterToggle, value)
             actionSave?.isVisible = !value
             with(activity as MainActivity) {
-                invalidateToolbar()
                 requestNavigationHidden(value)
-                setDisplayHomeAsUpEnabled(value)
             }
         }
 
