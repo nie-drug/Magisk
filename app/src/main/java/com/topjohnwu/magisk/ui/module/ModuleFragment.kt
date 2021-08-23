@@ -34,7 +34,6 @@ class ModuleFragment : BaseUIFragment<ModuleViewModel, FragmentModuleMd2Binding>
             MotionRevealHelper.withViews(binding.moduleFilter, binding.moduleFilterToggle, value)
             with(activity as MainActivity) {
                 requestNavigationHidden(value)
-                setDisplayHomeAsUpEnabled(value)
             }
         }
 
