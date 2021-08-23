@@ -24,7 +24,6 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupToolbar(binding!!.toolbar, R.string.settings)
         binding.settingsList.setOnViewReadyListener {
             binding.settingsList.scrollToPosition(0)
         }
