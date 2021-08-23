@@ -8,18 +8,35 @@
             name="viewModel"
             type="com.topjohnwu.magisk.ui.settings.SettingsViewModel" />
     </data>
-    <androidx.recyclerview.widget.RecyclerView
-        adapter="@{viewModel.adapter}"
-        itemBinding="@{viewModel.itemBinding}"
-        items="@{viewModel.items}"
-        android:id="@+id/settings_list"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusableInTouchMode="false"
-        android:clipToPadding="false"
         android:orientation="vertical"
-        android:scrollIndicators="top"
-        app:fitsSystemWindowsInsets="bottom"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_settings"/>
+        tools:ignore="RtlHardcoded">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:fitsSystemWindowsInsets="top"
+            android:id="@+id/appbar"
+            app:elevation="0dp">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/toolbar" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_settings"
+            itemBinding="@{viewModel.itemBinding}"
+            android:focusableInTouchMode="false"
+            app:fitsSystemWindowsInsets="bottom"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/settings_list"
+            adapter="@{viewModel.adapter}"
+            android:orientation="vertical"
+            android:clipToPadding="false"
+            items="@{viewModel.items}" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
