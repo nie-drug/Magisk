@@ -62,18 +62,13 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
                 else -> false
             }
 
-            setDisplayHomeAsUpEnabled(!isRootFragment)
             requestNavigationHidden(!isRootFragment)
-
             binding.bottomNavigation.menu.forEach {
                 if (it.itemId == destination.id) {
                     it.isChecked = true
                 }
             }
         }
-
-        setSupportActionBar(binding.toolbar)
-
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             getScreen(it.itemId)?.navigate()
             true
@@ -108,15 +103,7 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
         }
         return true
     }
-
-    fun setDisplayHomeAsUpEnabled(isEnabled: Boolean) {
-        binding.toolbar.startAnimations()
-        when {
-            isEnabled -> binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
-            else -> binding.toolbar.navigationIcon = null
-        }
-    }
-
+    
     @Suppress("UNCHECKED_CAST")
     internal fun requestNavigationHidden(hide: Boolean = true) {
         val bottomView = binding.bottomNavigation
@@ -147,11 +134,6 @@ open class MainActivity : BaseUIActivity<MainViewModel, ActivityMainMd2Binding>(
         val bottomParams = bottomView.layoutParams as? CoordinatorLayout.LayoutParams
         val bottomBehavior = bottomParams?.behavior as? HideableBehavior<View>
         bottomBehavior?.setHidden(bottomView, hide, hide)
-    }
-
-    fun invalidateToolbar() {
-        //binding.toolbar.startAnimations()
-        binding.toolbar.invalidate()
     }
 
     private fun getScreen(name: String?): NavDirections? {
