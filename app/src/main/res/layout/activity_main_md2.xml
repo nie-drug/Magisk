@@ -13,19 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="RtlHardcoded">
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            app:fitsSystemWindowsInsets="top"
-            android:id="@+id/appbar"
-            app:elevation="0dp">
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/toolbar" />
-        </com.google.android.material.appbar.AppBarLayout>
         <androidx.fragment.app.FragmentContainerView
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
