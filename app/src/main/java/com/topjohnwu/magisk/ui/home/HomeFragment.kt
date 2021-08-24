@@ -42,7 +42,7 @@ class HomeFragment : BaseUIFragment<HomeViewModel, FragmentHomeMd2Binding>() {
         savedInstanceState: Bundle?
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
-
+        setSupportActionBar(binding.toolbar)
         // If titles are squished, hide icons
         with(binding.homeMagiskWrapper) {
             checkTitle(homeMagiskTitle, homeMagiskIcon)
