@@ -2,6 +2,8 @@ package com.topjohnwu.magisk.ui.settings
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.topjohnwu.magisk.R
 import com.topjohnwu.magisk.arch.BaseUIFragment
 import com.topjohnwu.magisk.databinding.FragmentSettingsMd2Binding
