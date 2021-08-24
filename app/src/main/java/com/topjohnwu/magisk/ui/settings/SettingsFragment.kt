@@ -2,8 +2,6 @@ package com.topjohnwu.magisk.ui.settings
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 import com.topjohnwu.magisk.R
 import com.topjohnwu.magisk.arch.BaseUIFragment
 import com.topjohnwu.magisk.databinding.FragmentSettingsMd2Binding
@@ -17,11 +15,6 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
 
     override val layoutRes = R.layout.fragment_settings_md2
     override val viewModel by viewModel<SettingsViewModel>()
-    fun navigateUp() {
-        navController.navigateUp()
-    }
-    val navController: NavController
-        get() = NavHostFragment.findNavController(this)
     override fun onStart() {
         super.onStart()
     }
