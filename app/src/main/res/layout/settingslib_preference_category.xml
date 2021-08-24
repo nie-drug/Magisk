@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.topjohnwu.magisk.ui.settings.BaseSettingsItem" />
+    </data>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+        <RelativeLayout
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_gravity="start"
+                android:id="@android:id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:id="@android:id/title"
+                android:text="@{item.title}"
+                gone="@{item.title.empty}"
+                style="@style/PreferenceCategoryTitleTextStyle" />
+            <TextView
+                android:textColor="?android:attr/textColorSecondary"
+                android:ellipsize="end"
+                android:layout_gravity="start"
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="10"
+                android:singleLine="true"
+                android:layout_below="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:textAlignment="viewStart"
+                android:layout_alignStart="@android:id/title"
+                android:text="@{item.description}"
+                gone="@{item.description.empty}"
+                style="@style/PreferenceSummaryTextStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
