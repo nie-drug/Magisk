@@ -17,12 +17,28 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             app:fitsSystemWindowsInsets="top"
-            android:id="@+id/appbar"
-            app:elevation="0dp">
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/toolbar" />
+            android:id="@+id/appbar">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                app:collapsedTitleTextAppearance="@style/CollapsingToolbarTitle.Collapsed"
+                app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+                app:scrimVisibleHeightTrigger="137dp"
+                android:id="@+id/collapsing_toolbar"
+                android:layout_height="match_parent"
+                app:expandedTitleMarginStart="24dp"
+                app:expandedTitleMarginEnd="24dp"
+                app:scrimAnimationDuration="50"
+                android:clipToPadding="false"
+                android:layout_width="179dp"
+                app:toolbarId="@id/toolbar"
+                app:maxLines="3">
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:transitionName="shared_element_view"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    app:layout_collapseMode="pin"                                      
+                    android:id="@+id/toolbar" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
         <androidx.recyclerview.widget.RecyclerView
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
