@@ -15,6 +15,11 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
 
     override val layoutRes = R.layout.fragment_settings_md2
     override val viewModel by viewModel<SettingsViewModel>()
+    fun navigateUp() {
+        navController.navigateUp()
+    }
+    val navController: NavController
+        get() = NavHostFragment.findNavController(this)
     override fun onStart() {
         super.onStart()
     }
@@ -31,7 +36,6 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
         }
         binding.settingsList.fixEdgeEffect()
     }
-
     override fun onResume() {
         super.onResume()
         viewModel.items.forEach { it.refresh() }
