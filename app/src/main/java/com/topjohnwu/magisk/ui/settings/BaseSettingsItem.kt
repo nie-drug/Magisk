@@ -14,7 +14,7 @@ import com.topjohnwu.magisk.view.MagiskDialog
 
 sealed class BaseSettingsItem : ObservableItem<BaseSettingsItem>() {
 
-    override val layoutRes get() = R.layout.item_settings
+    override val layoutRes get() = R.layout.settingslib_preference
 
     open val icon: Int get() = 0
     open val title: TextHolder get() = TextHolder.EMPTY
