@@ -34,6 +34,7 @@
             android:minWidth="48dp"
             android:gravity="start|center_vertical"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:paddingLeft="0dp"
             android:paddingStart="0dp"
             android:paddingRight="0dp"
@@ -62,7 +63,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textSize="20dip"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textAppearance="?attr/textAppearanceHeadline6"
                 android:ellipsize="marquee"
                 android:text="@{item.title}"/>
             <TextView
