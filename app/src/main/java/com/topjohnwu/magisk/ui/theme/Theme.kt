@@ -39,8 +39,8 @@ enum class Theme(
     Fraxure(
         themeName = "Fraxure (Legacy)",
         themeRes = R.style.ThemeFoundationMD2_Fraxure
-    ),
-    
+    );
+
     val isSelected get() = Config.themeOrdinal == ordinal
 
     fun select() {
