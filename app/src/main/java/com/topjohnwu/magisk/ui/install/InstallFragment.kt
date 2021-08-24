@@ -18,7 +18,7 @@ class InstallFragment : BaseUIFragment<InstallViewModel, FragmentInstallMd2Bindi
 
     override fun onStart() {
         super.onStart()
-        requireActivity().setTitle(R.string.install)
+        requireActivity().setTitle(R.string.section_install)
 
         // Allow markwon to run in viewmodel scope
         binding.releaseNotes.coroutineScope = viewModel.viewModelScope
