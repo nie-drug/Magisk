@@ -2,6 +2,8 @@ package com.topjohnwu.magisk.ui.settings
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.topjohnwu.magisk.R
 import com.topjohnwu.magisk.arch.BaseUIFragment
 import com.topjohnwu.magisk.databinding.FragmentSettingsMd2Binding
@@ -20,14 +22,11 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
     }
     val navController: NavController
         get() = NavHostFragment.findNavController(this)
-    override fun onStart() {
-        super.onStart()
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity.setSupportActionBar(binding.toolbar)
         binding.toolbar.setNavigationOnClickListener {
-            onBackPressed()
+            navigateUp()
         }
         binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
         binding.toolbar.setTitle(R.string.settings)
