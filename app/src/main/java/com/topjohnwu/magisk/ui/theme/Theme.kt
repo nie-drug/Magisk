@@ -40,10 +40,6 @@ enum class Theme(
         themeName = "Fraxure (Legacy)",
         themeRes = R.style.ThemeFoundationMD2_Fraxure
     ),
-    Monet(
-        themeName = "Monet",
-        themeRes = R.style.ThemeFoundationMD3_Monet
-    );
     
     val isSelected get() = Config.themeOrdinal == ordinal
 
