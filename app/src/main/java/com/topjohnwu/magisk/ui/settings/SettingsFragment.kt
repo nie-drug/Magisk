@@ -28,8 +28,9 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         activity.setSupportActionBar(binding.toolbar)
-        binding.toolbar.setNavigationOnClickListener(navigationOnClickListener
-            ?: View.OnClickListener { v: View? -> navigateUp() })
+        binding.toolbar.setNavigationOnClickListener {
+            navigateUp()
+        }
         binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
         binding.toolbar.setTitle(R.string.settings)
         binding.settingsList.setOnViewReadyListener {
