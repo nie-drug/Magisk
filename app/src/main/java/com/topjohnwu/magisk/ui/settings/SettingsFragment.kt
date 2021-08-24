@@ -15,15 +15,21 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
 
     override val layoutRes = R.layout.fragment_settings_md2
     override val viewModel by viewModel<SettingsViewModel>()
-
+    fun navigateUp() {
+        navController.navigateUp()
+    }
+    val navController: NavController
+        get() = NavHostFragment.findNavController(this)
     override fun onStart() {
         super.onStart()
-
-        activity.title = resources.getString(R.string.settings)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity.setSupportActionBar(binding.toolbar)
+        binding.toolbar.setNavigationOnClickListener(navigationOnClickListener
+            ?: View.OnClickListener { v: View? -> navigateUp() })
+        binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
+        binding.toolbar.setTitle(R.string.settings)
         binding.settingsList.setOnViewReadyListener {
             binding.settingsList.scrollToPosition(0)
         }
