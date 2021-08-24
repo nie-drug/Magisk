@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.topjohnwu.magisk.ui.settings.BaseSettingsItem" />
+        <variable
+            name="callback"
+            type="com.topjohnwu.magisk.ui.settings.BaseSettingsItem.Callback" />
+    </data>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:onClick="@{(view) -> item.onPressed(view, callback)}"
+        isEnabled="@{item.enabled}">
+        <LinearLayout
+            android:gravity="start|center"
+            android:orientation="horizontal"
+            android:id="@+id/icon_frame"
+            android:paddingLeft="0dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="4dp"
+            gone="@{item.icon == 0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="8dp">
+            <androidx.preference.internal.PreferenceImageView
+                android:id="@android:id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@{item.icon}"
+                app:maxHeight="48dp"
+                app:maxWidth="48dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:ellipsize="marquee"
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="@{item.title}" />
+            <TextView
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_gravity="start"
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="10"
+                android:layout_below="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:textAlignment="viewStart"
+                android:layout_alignStart="@android:id/title"
+                android:text="@{item.description}"
+                gone="@{item.description.empty}"
+                style="@style/PreferenceSummaryTextStyle" />
+        </RelativeLayout>
+        <androidx.appcompat.widget.SwitchCompat
+            android:gravity="end|center_vertical"
+            android:id="@+id/switchWidget"
+            android:checked="@{item.checked}"
+            android:onCheckedChanged="@{(v, c) -> item.onToggle(v, callback, c)}"
+            goneUnless="@{item.showSwitch}"
+            android:paddingLeft="16dp"
+            android:paddingRight="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp" />
+    </LinearLayout>
+</layout>
