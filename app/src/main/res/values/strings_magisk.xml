@@ -131,20 +131,20 @@
     <string name="settings_dark_mode_dark">Always Dark</string>
     <string name="settings_download_path_title">Download path</string>
     <string name="settings_download_path_message">Files will be saved to %1$s</string>
-    <string name="settings_clear_cache_title">Clear Repo Cache</string>
-    <string name="settings_clear_cache_summary">Clear the cached information for online repos. This forces the app to refresh online</string>
+    <string name="settings_clear_cache_title">Clear repository cache</string>
+    <string name="settings_clear_cache_summary">Clear all on-device cache that was saved for online repository</string>
     <string name="settings_hide_app_title">Hide the Magisk app</string>
     <string name="settings_hide_app_summary">Install a proxy app with random package ID and custom app label</string>
     <string name="settings_restore_app_title">Restore the Magisk app</string>
     <string name="settings_restore_app_summary">Un-hide the app and restore it back to the original APK</string>
     <string name="language">Language</string>
-    <string name="system_default">(System Default)</string>
-    <string name="settings_check_update_title">Check Updates</string>
+    <string name="system_default">System default</string>
+    <string name="settings_check_update_title">Check updates</string>
     <string name="settings_check_update_summary">Periodically check for updates in the background</string>
-    <string name="settings_update_channel_title">Update Channel</string>
+    <string name="settings_update_channel_title">Update channel</string>
     <string name="settings_update_stable">Stable</string>
     <string name="settings_update_beta">Beta</string>
-    <string name="settings_update_custom">Custom Channel</string>
+    <string name="settings_update_custom">Custom channel</string>
     <string name="settings_update_custom_msg">Insert a custom URL</string>
     <string name="settings_magiskhide_summary">Hide Magisk from various forms of detection</string>
     <string name="settings_hosts_title">Systemless hosts</string>
@@ -163,15 +163,15 @@
     <string name="settings_su_request_30">30 seconds</string>
     <string name="settings_su_request_45">45 seconds</string>
     <string name="settings_su_request_60">60 seconds</string>
-    <string name="superuser_access">Superuser Access</string>
+    <string name="superuser_access">Superuser access</string>
     <string name="auto_response">Automatic Response</string>
-    <string name="request_timeout">Request Timeout</string>
-    <string name="superuser_notification">Superuser Notification</string>
+    <string name="request_timeout">Request timeout</string>
+    <string name="superuser_notification">Superuser notification</string>
     <string name="settings_su_reauth_title">Reauthenticate after upgrade</string>
     <string name="settings_su_reauth_summary">Reauthenticate superuser permissions after an application upgrades</string>
-    <string name="settings_su_tapjack_title">Enable Tapjacking Protection</string>
+    <string name="settings_su_tapjack_title">Tapjacking protection</string>
     <string name="settings_su_tapjack_summary">The superuser prompt dialog will not respond to input while obscured by any other window or overlay</string>
-    <string name="settings_su_biometric_title">Enable Biometric Authentication</string>
+    <string name="settings_su_biometric_title">Biometric authentication</string>
     <string name="settings_su_biometric_summary">Use biometric authentication to allow superuser requests</string>
     <string name="no_biometric">Unsupported device or no biometric settings are enabled</string>
     <string name="settings_customization">Customization</string>
@@ -179,7 +179,7 @@
     <string name="settings_doh_title">DNS over HTTPS</string>
     <string name="settings_doh_description">Workaround DNS poisoning in some nations</string>
 
-    <string name="multiuser_mode">Multiuser Mode</string>
+    <string name="multiuser_mode">Multiuser mode</string>
     <string name="settings_owner_only">Device Owner Only</string>
     <string name="settings_owner_manage">Device Owner Managed</string>
     <string name="settings_user_independent">User-Independent</string>
@@ -187,7 +187,7 @@
     <string name="owner_manage_summary">Only owner can manage root access and receive request prompts</string>
     <string name="user_indepenent_summary">Each user has his/her own separate root rules</string>
 
-    <string name="mount_namespace_mode">Mount Namespace Mode</string>
+    <string name="mount_namespace_mode">Mount namespace mode</string>
     <string name="settings_ns_global">Global Namespace</string>
     <string name="settings_ns_requester">Inherit Namespace</string>
     <string name="settings_ns_isolate">Isolated Namespace</string>
