@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
 import com.topjohnwu.magisk.BR
 import com.topjohnwu.magisk.R
 import com.topjohnwu.magisk.arch.BaseUIFragment
@@ -16,8 +14,10 @@ import com.topjohnwu.magisk.databinding.ItemThemeBindingImpl
 import com.topjohnwu.magisk.di.viewModel
 
 class ThemeFragment : BaseUIFragment<ThemeViewModel, FragmentThemeMd2Binding>() {
+
     override val layoutRes = R.layout.fragment_theme_md2
     override val viewModel by viewModel<ThemeViewModel>()
+
     private fun <T> Array<T>.paired(): List<Pair<T, T?>> {
         val iterator = iterator()
         if (!iterator.hasNext()) return emptyList()
@@ -29,23 +29,14 @@ class ThemeFragment : BaseUIFragment<ThemeViewModel, FragmentThemeMd2Binding>() 
         }
         return result
     }
-    fun navigateUp() {
-        navController.navigateUp()
-    }
-    val navController: NavController
-        get() = NavHostFragment.findNavController(this)
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        activity.setSupportActionBar(binding.toolbar)
-        binding.toolbar.setNavigationOnClickListener {
-            navigateUp()
-        }
-        binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
-        binding.toolbar.setTitle(R.string.section_theme)
+
         for ((a, b) in Theme.values().paired()) {
             val c = inflater.inflate(R.layout.item_theme_container, null, false)
             val left = c.findViewById<FrameLayout>(R.id.left)
@@ -66,4 +57,11 @@ class ThemeFragment : BaseUIFragment<ThemeViewModel, FragmentThemeMd2Binding>() 
 
         return binding.root
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        activity.title = getString(R.string.section_theme)
+    }
+
 }
