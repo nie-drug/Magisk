@@ -1,51 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <import type="com.topjohnwu.magisk.ui.theme.Theme" />
+
         <variable
             name="viewModel"
             type="com.topjohnwu.magisk.ui.theme.ThemeViewModel" />
+
     </data>
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="RtlHardcoded">
-        <com.google.android.material.appbar.AppBarLayout
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/l1"
+        android:paddingTop="@dimen/internal_action_bar_size"
+        android:paddingEnd="@dimen/l1"
+        android:paddingBottom="@dimen/l1"
+        app:fitsSystemWindowsInsets="top|bottom">
+
+        <LinearLayout
+            android:id="@+id/theme_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            app:fitsSystemWindowsInsets="top"
-            android:id="@+id/appbar"
-            app:elevation="0dp">
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/toolbar" />
-        </com.google.android.material.appbar.AppBarLayout>
-        <androidx.core.widget.NestedScrollView
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:fillViewport="true"
-            android:paddingStart="@dimen/l1"
-            android:paddingEnd="@dimen/l1"
-            android:paddingBottom="@dimen/l1"
-            app:fitsSystemWindowsInsets="bottom">
-            <LinearLayout
-                android:id="@+id/theme_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="@dimen/l1"
-                android:useDefaultMargins="true">
-                <include
-                    android:id="@+id/theme_card_dark"
-                    item="@{viewModel.themeHeadline}"
-                    layout="@layout/item_tappable_headline"
-                    listener="@{viewModel}" />
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:orientation="vertical"
+            android:paddingTop="@dimen/l1"
+            android:useDefaultMargins="true">
+
+            <include
+                android:id="@+id/theme_card_dark"
+                item="@{viewModel.themeHeadline}"
+                layout="@layout/item_tappable_headline"
+                listener="@{viewModel}" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 </layout>
