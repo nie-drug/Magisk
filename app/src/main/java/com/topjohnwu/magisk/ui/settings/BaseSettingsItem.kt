@@ -170,7 +170,7 @@ sealed class BaseSettingsItem : ObservableItem<BaseSettingsItem>() {
     abstract class Blank : BaseSettingsItem()
 
     abstract class Section : BaseSettingsItem() {
-        override val layoutRes = R.layout.item_settings_section
+        override val layoutRes = R.layout.settingslib_preference_category
     }
 
 }
