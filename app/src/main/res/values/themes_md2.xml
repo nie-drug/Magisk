@@ -87,4 +87,10 @@
         <item name="colorDisabled">#808080</item>
         <item name="colorDisabledVariant">#66808080</item>
     </style>
+    <style name="CollapsingToolbarTitle.Collapsed" parent="TextAppearance.GoogleMaterial.Subhead1">
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="CollapsingToolbarTitle.Expanded" parent="TextAppearance.GoogleMaterial.Subhead1">
+        <item name="android:textSize">36dp</item>
+    </style>
 </resources>
