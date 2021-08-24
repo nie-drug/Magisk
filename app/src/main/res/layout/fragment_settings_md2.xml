@@ -21,14 +21,14 @@
                 app:collapsedTitleTextAppearance="@style/CollapsingToolbarTitle.Collapsed"
                 app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
                 app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
-                app:scrimVisibleHeightTrigger="137dp"
+                app:scrimVisibleHeightTrigger="@dimen/settingslib_scrim_visible_height_trigger"
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
-                app:expandedTitleMarginStart="24dp"
-                app:expandedTitleMarginEnd="24dp"
+                app:expandedTitleMarginStart="@dimen/expanded_title_margin_start"
+                app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
                 app:scrimAnimationDuration="50"
                 android:clipToPadding="false"
-                android:layout_height="179dp"
+                android:layout_height="@dimen/settingslib_toolbar_layout_height"
                 app:toolbarId="@id/toolbar"
                 app:maxLines="3">
                 <com.google.android.material.appbar.MaterialToolbar
