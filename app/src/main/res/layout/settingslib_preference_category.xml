@@ -29,6 +29,7 @@
                 android:textAlignment="viewStart"
                 android:text="@{item.title}"
                 gone="@{item.title.empty}"
+                android:textAppearance="?attr/textAppearanceSubhead2"
                 style="@style/PreferenceCategoryTitleTextStyle" />
             <TextView
                 android:textColor="?android:attr/textColorSecondary"
