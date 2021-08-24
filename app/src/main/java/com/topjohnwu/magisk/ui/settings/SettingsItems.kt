@@ -67,7 +67,6 @@ object Language : BaseSettingsItem.Selector() {
 }
 
 object Theme : BaseSettingsItem.Blank() {
-    override val icon = R.drawable.ic_paint
     override val title = R.string.section_theme.asText()
 }
 
