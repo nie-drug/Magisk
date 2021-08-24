@@ -2133,17 +2133,17 @@
 		<item name="android:textSize">@dimen/gm3_sys_typescale_subhead1_text_size</item>
 		<item name="android:textStyle">@integer/gm3_sys_typescale_subhead1_text_style</item>
 		<item name="android:textAllCaps">@bool/gm3_sys_typescale_subhead1_text_all_caps</item>
-		<item name="android:fontFamily">?attr/themeFontFamilyContentMedium</item>
+		<item name="android:fontFamily">?attr/themeFontFamilyMedium</item>
 		<item name="android:letterSpacing">@dimen/gm3_sys_typescale_subhead1_letter_spacing</item>
-		<item name="fontFamily">?attr/themeFontFamilyContentMedium</item>
+		<item name="fontFamily">?attr/themeFontFamilyMedium</item>
 	</style>
 	<style name="TextAppearance.GoogleMaterial3.Subhead2" parent="@style/TextAppearance.GoogleMaterial.Subhead2">
 		<item name="android:textSize">@dimen/gm3_sys_typescale_subhead2_text_size</item>
 		<item name="android:textStyle">@integer/gm3_sys_typescale_subhead2_text_style</item>
 		<item name="android:textAllCaps">@bool/gm3_sys_typescale_subhead2_text_all_caps</item>
-		<item name="android:fontFamily">?attr/themeFontFamilyContentMedium</item>
+		<item name="android:fontFamily">?attr/themeFontFamilyMedium</item>
 		<item name="android:letterSpacing">@dimen/gm3_sys_typescale_subhead2_letter_spacing</item>
-		<item name="fontFamily">?attr/themeFontFamilyContentMedium</item>
+		<item name="fontFamily">?attr/themeFontFamilyMedium</item>
 	</style>
 	<style name="TextAppearance.GoogleMaterial3.Subtitle1" parent="@style/TextAppearance.GoogleMaterial.Subtitle1">
 		<item name="android:textSize">@dimen/gm3_sys_typescale_subtitle1_text_size</item>
