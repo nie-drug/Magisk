@@ -80,6 +80,7 @@
         <item name="colorSecondaryVariant">@color/google_orange100</item>
     </style>
     <style name="ThemeFoundationMD3.Monet" parent="Theme.GoogleMaterial3.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="colorSurfaceVariant">#E8E8E8</item>
         <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
         <item name="colorOnPrimaryVariant">#D9E6E6E6</item>
