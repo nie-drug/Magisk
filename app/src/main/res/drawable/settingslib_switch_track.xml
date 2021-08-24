@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="28dp"
+    android:width="52dp"
+    android:shape="rectangle">
+    <solid
+        android:color="@color/gm3_switch_track_tint" />
+    <corners
+        android:radius="35dp" />
+</shape>
