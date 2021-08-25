@@ -59,7 +59,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
-                android:text="@{item.title}" />
+                android:text="@{item.title}"
+                isEnabled="@{item.enabled}" />
             <TextView
                 android:textColor="?android:attr/textColorSecondary"
                 android:layout_gravity="start"
@@ -73,6 +74,7 @@
                 android:layout_alignStart="@android:id/title"
                 android:text="@{item.description}"
                 gone="@{item.description.empty}"
+                isEnabled="@{item.enabled}"
                 style="@style/PreferenceSummaryTextStyle" />
         </RelativeLayout>
         <androidx.appcompat.widget.SwitchCompat
@@ -86,6 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingStart="16dp"
-            android:paddingEnd="0dp" />
+            android:paddingEnd="0dp"
+            isEnabled="@{item.enabled}" />
     </LinearLayout>
 </layout>
