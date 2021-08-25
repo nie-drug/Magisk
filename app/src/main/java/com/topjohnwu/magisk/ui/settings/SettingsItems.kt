@@ -69,6 +69,20 @@ object Language : BaseSettingsItem.Selector() {
 object Theme : BaseSettingsItem.Blank() {
     override val title = R.string.section_theme.asText()
 }
+// --- NETWORK
+object NETWORK : BaseSettingsItem.Section() {
+    override val title = R.string.SETTINGS_NETWORK.asText()
+}
+// --- DNS OVER HTTPS
+object DNS_OVER_HTTPS : BaseSettingsItem.Toggle() {
+    override val title = R.string.SETTINGS_DNS_OVER_HTTPS_TITLE.asText()
+    override val description = R.string.SETTINGS_DNS_OVER_HTTPS_SUMMARY.asText()
+    override var value = Config.doh
+        set(value) = setV(value, field, { field = it }) {
+            Config.doh = it
+        }
+}
+
 
 // --- App
 
@@ -194,15 +208,6 @@ object UpdateChecker : BaseSettingsItem.Toggle() {
         set(value) = setV(value, field, { field = it }) {
             Config.checkUpdate = it
             UpdateCheckService.schedule(AppContext)
-        }
-}
-
-object DoHToggle : BaseSettingsItem.Toggle() {
-    override val title = R.string.settings_doh_title.asText()
-    override val description = R.string.settings_doh_description.asText()
-    override var value = Config.doh
-        set(value) = setV(value, field, { field = it }) {
-            Config.doh = it
         }
 }
 

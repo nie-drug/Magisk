@@ -51,7 +51,11 @@ class SettingsViewModel(
         )
         if (isRunningAsStub && ShortcutManagerCompat.isRequestPinShortcutSupported(context))
             list.add(AddShortcut)
-
+        // NETWORK
+        list.addAll(listOf(
+            NETWORK,
+            DNS_OVER_HTTPS
+        ))
         // Manager
         list.addAll(listOf(
             AppSettings,
