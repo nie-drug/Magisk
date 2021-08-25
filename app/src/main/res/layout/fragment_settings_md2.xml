@@ -44,13 +44,11 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:listitem="@layout/item_settings"
             itemBinding="@{viewModel.itemBinding}"
-            android:focusableInTouchMode="false"
             app:fitsSystemWindowsInsets="bottom"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:id="@+id/settings_list"
             adapter="@{viewModel.adapter}"
-            android:orientation="vertical"
             android:clipToPadding="false"
             items="@{viewModel.items}" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
