@@ -11,7 +11,6 @@ import com.topjohnwu.magisk.di.viewModel
 import com.topjohnwu.magisk.ktx.setOnViewReadyListener
 
 class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Binding>() {
-
     override val layoutRes = R.layout.fragment_settings_md2
     override val viewModel by viewModel<SettingsViewModel>()
     fun navigateUp() {
@@ -27,6 +26,7 @@ class SettingsFragment : BaseUIFragment<SettingsViewModel, FragmentSettingsMd2Bi
         }
         binding.toolbar.setNavigationIcon(R.drawable.quantum_gm_ic_arrow_back_vd_theme_24)
         binding.toolbar.setTitle(R.string.settings)
+        binding.settingsList.fixEdgeEffect()
         binding.settingsList.setOnViewReadyListener {
             binding.settingsList.scrollToPosition(0)
         }
